@@ -1,5 +1,6 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import LiquidEther from '../components/LiquidEther';
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -16,8 +17,28 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
       <body
-        className={`${poppins.variable} antialiased`}
+        className={`${poppins.variable} antialiased overflow-x-hidden`}
       >
+
+        <div className="absolute top-0 left-0 h-full w-full z-[-1]">
+          <LiquidEther
+            colors={[ '#251E0B', '#FEB901', '#281F05' ]}
+            mouseForce={20}
+            cursorSize={100}
+            isViscous={false}
+            viscous={30}
+            iterationsViscous={32}
+            iterationsPoisson={32}
+            resolution={0.5}
+            isBounce={false}
+            autoDemo={true}
+            autoSpeed={0.5}
+            autoIntensity={2.2}
+            takeoverDuration={0.25}
+            autoResumeDelay={3000}
+            autoRampDuration={0.6}
+          />
+        </div>
         {children}
       </body>
     </html>
