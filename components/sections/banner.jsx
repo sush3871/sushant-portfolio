@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Hand from '../../public/hand.svg'
-import HeroImage from '../..//public/img-1.png'
+import HeroImage from '../../public/img-1.png'
 import Button from '../button'
 import HeroSkills from '../heroSkills'
 

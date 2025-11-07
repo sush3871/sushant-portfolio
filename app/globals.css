@@ -150,6 +150,18 @@
   .lg\:btn-theme-primary {
     @apply text-xl leading-8 px-8 py-4;
   }
+
+  .main-container{
+    @apply ps-[20px] pe-[20px] ms-auto me-auto max-w-[1440px] w-full 
+  }
+  
+  .md\:.main-container {
+    @apply ps-[40px] pe-[40px];
+  }
+  
+  .lg\:.main-container {
+    @apply ps-[60px] pe-[60px];
+  }
 }
 
 
@@ -192,4 +204,8 @@
   }
 
 
+}
+
+.font-outline-2-primary{
+  -webkit-text-stroke: 2px #feb901
 }
