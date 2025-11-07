@@ -4,7 +4,7 @@ import LiquidEther from '../components/LiquidEther';
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight : ['400', '500', '600', '700', '800', '900']
+  weight : ['600', '700', '800', '900']
 });
 
 

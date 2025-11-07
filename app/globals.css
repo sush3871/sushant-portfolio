@@ -79,6 +79,7 @@
   --sidebar-ring: oklch(0.556 0 0);
   --radius: 0.625rem;
   --theme-primary: #feb901;
+  --bold: 700;
 }
 
 .light {
@@ -115,6 +116,7 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
   --theme-primary: #feb901;
+  --bold: 700;
 }
 
 @layer base {
@@ -164,7 +166,6 @@
   }
 }
 
-
 @layer components {
   .btn-theme-primary-outlined {
     @apply flex items-center gap-3 rounded-full border border-black/10 bg-black/10 px-6 py-3 text-lg font-medium leading-tight text-black backdrop-blur-sm transition-all ease-in-out duration-250;
@@ -202,8 +203,6 @@
   .hero-skill{
     @apply flex items-center rounded-full backdrop-blur-sm bg-white text-black gap-3 p-3 pe-7 
   }
-
-
 }
 
 .font-outline-2-primary{
