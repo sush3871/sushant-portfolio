@@ -19,7 +19,6 @@ export default function RootLayout({ children }) {
       <body
         className={`${poppins.variable} antialiased overflow-x-hidden`}
       >
-
         <div className="absolute top-0 left-0 h-full w-full z-[-1]">
           <LiquidEther
             colors={[ '#251E0B', '#FEB901', '#281F05' ]}

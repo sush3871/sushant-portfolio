@@ -41,6 +41,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --color-theme-primary: var(--theme-primary);
 }
 
 :root {
@@ -77,6 +78,7 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
   --radius: 0.625rem;
+  --theme-primary: #feb901;
 }
 
 .light {
@@ -112,6 +114,7 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --theme-primary: #feb901;
 }
 
 @layer base {
@@ -123,7 +126,70 @@
   }
 }
 
-.bg-theme-primary {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 185 1 / var(--tw-bg-opacity));
+@layer components {
+  .btn-theme-primary {
+    @apply flex items-center gap-3 rounded-full border border-theme-primary bg-theme-primary px-6 py-3 leading-tight text-black/100 backdrop-blur-sm transition-all ease-in-out duration-250;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  
+  .btn-theme-primary:hover {
+    @apply border-theme-primary;
+  }
+  
+  /* Responsive overrides */
+  .sm\:btn-theme-primary {
+    @apply text-sm leading-6;
+  }
+  
+  .md\:btn-theme-primary {
+    @apply text-base leading-7;
+  }
+  
+  .lg\:btn-theme-primary {
+    @apply text-xl leading-8 px-8 py-4;
+  }
+}
+
+
+@layer components {
+  .btn-theme-primary-outlined {
+    @apply flex items-center gap-3 rounded-full border border-black/10 bg-black/10 px-6 py-3 text-lg font-medium leading-tight text-black backdrop-blur-sm transition-all ease-in-out duration-250;
+    
+  }
+  
+  .btn-theme-primary-outlined:hover {
+    @apply border-theme-primary;  /* Maintains theme border on hover */
+  }
+  
+  /* Dark mode override: Uses theme-primary for border/bg/text with opacity */
+  .dark .btn-theme-primary-outlined {
+    @apply border-theme-primary/100 bg-theme-primary/10 text-theme-primary;
+  }
+  
+  /* Responsive: Tailwind prefixes match your media queries (sm=640px, md=768px, lg=1024px) */
+  @media (min-width: 640px) {
+    .btn-theme-primary-outlined {
+      @apply text-sm leading-6;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .btn-theme-primary-outlined {
+      @apply text-base leading-7;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .btn-theme-primary-outlined {
+      @apply text-xl leading-8 px-7 py-4;  /* 1.75rem = px-7 */
+    }
+  }
+
+  .hero-skill{
+    @apply flex items-center rounded-full backdrop-blur-sm bg-white text-black gap-3 p-3 pe-7 
+  }
+
+
 }
