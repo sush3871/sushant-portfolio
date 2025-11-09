@@ -21,7 +21,7 @@ export default function Home() {
       <Skills/>
       <Cta/>
       <SocialMedia/>
-      {/* <Contact/> */}
+      <Contact/>
     </main>
       <Footer/>
     </>
