@@ -2,6 +2,7 @@ import React from 'react'
 import Title from '../title'
 import Image from 'next/image'
 import Button from '../button'
+import CircleImg from '../../public/icons/memoji.svg'
 
 
 const cta = () => {
@@ -11,7 +12,7 @@ const cta = () => {
             <Title title = "Discuss Project"/>
             <div className="w-full flex text-center flex-col items-center gap-3 lg:gap-8 mt-16 p-8 sm:p-10 md:p-16 bg-secondary bg-opacity-5 rounded-[50px]">
                 <div className="aspect-square overflow-hidden p-1.5 md:p-2 rounded-full border md:border-2 dark:border-theme-primary">
-                    <Image src='https://nikunjthesiya.vercel.app/_next/static/media/profile-img.0bfc992c.svg' alt='My Logo' height={122} width={122} />
+                    <Image src={CircleImg} alt='My Logo' height={122} width={122} />
                 </div>
                 <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold dark:text-theme-primary text-theme-secondary">Sushant Shirke</h3>
                 <p className="dark:text-theme-white text-theme-secondary text-sm sm:text-lg md:text-xl lg:text-2xl">Front End Developer / Web Designer</p>
