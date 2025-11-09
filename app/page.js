@@ -7,6 +7,7 @@ import Experience from "@/components/sections/experience";
 import Skills from "@/components/sections/skills";
 import Cta from "@/components/sections/cta";
 import SocialMedia from "@/components/sections/socialMedia";
+import Contact from "@/components/sections/contact";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Skills/>
       <Cta/>
       <SocialMedia/>
+      <Contact/>
     </main>
       <Footer/>
     </>
